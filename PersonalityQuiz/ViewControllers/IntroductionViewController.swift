@@ -8,7 +8,6 @@
 import UIKit
 
 class IntroductionViewController: UIViewController {
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    //MARK: - Navigation
+    @IBAction func unwind(segue _: UIStoryboardSegue) {}
 }
-
