@@ -26,19 +26,13 @@ class ResultViewController: UIViewController {
 
     //MARK: - Private Methods
     private func whatAnimalIs() -> Animal {
-        var animalsScores = [
-            Animal.dog: 0,
-            Animal.cat: 0,
-            Animal.rabbit: 0,
-            Animal.turtle: 0
-        ]
+        var animalsScores: [Animal: Int] = [:]
 
         for answer in answersChosen {
-            switch answer.animal {
-            case .dog: animalsScores[.dog]? += 1
-            case .cat: animalsScores[.cat]? += 1
-            case .rabbit: animalsScores[.rabbit]? += 1
-            case .turtle: animalsScores[.turtle]? += 1
+            if let _ = animalsScores[answer.animal] {
+                animalsScores[answer.animal]? += 1
+            } else {
+                animalsScores[answer.animal] = 1
             }
         }
 
