@@ -18,7 +18,7 @@ class ResultViewController: UIViewController {
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.setHidesBackButton(true, animated: false)
+        navigationItem.hidesBackButton = true
 
         let animal = whatAnimalIs()
         updateLabels(with: animal)
